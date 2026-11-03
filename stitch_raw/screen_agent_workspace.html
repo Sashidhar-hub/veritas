@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>VERITAS</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f1f3ff", "surface-bright": "#f9f9ff", "inverse-surface": "#293040", "on-tertiary-fixed-variant": "#005323", "on-primary": "#ffffff", "secondary-fixed-dim": "#c2c6d3", "tertiary-fixed-dim": "#79db8d", "on-primary-container": "#fffbff", "outline-variant": "#c7c4d7", "secondary-fixed": "#dee2ef", "on-secondary-container": "#60646f", "primary-container": "#6063ee", "primary": "#4648d4", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#171c25", "primary-fixed-dim": "#c0c1ff", "surface-variant": "#dce2f7", "tertiary": "#006d30", "inverse-on-surface": "#edf0ff", "error-container": "#ffdad6", "on-error-container": "#93000a", "on-surface-variant": "#464554", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#424751", "on-primary-fixed-variant": "#2f2ebe", "on-tertiary-fixed": "#00210a", "primary-fixed": "#e1e0ff", "background": "#f9f9ff", "outline": "#767586", "on-surface": "#141b2b", "tertiary-fixed": "#95f8a7", "surface-container-high": "#e1e8fd", "tertiary-container": "#228844", "on-tertiary-container": "#000701", "surface-container": "#e9edff", "secondary": "#5a5e69", "inverse-primary": "#c0c1ff", "on-background": "#141b2b", "secondary-container": "#dee2ef", "surface-tint": "#494bd6", "error": "#ba1a1a", "surface-container-highest": "#dce2f7", "on-error": "#ffffff", "surface-dim": "#d3daef", "surface": "#f9f9ff", "on-secondary": "#ffffff", "on-primary-fixed": "#07006c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1rem", "gutter": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-sm": "0.5rem", "margin-desktop": "2rem", "space-md": "1rem", "margin-tablet": "1.5rem" }, "fontFamily": { "headline-md": ["Geist"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Geist"], "body-md": ["Geist"], "headline-sm": ["Geist"], "body-sm": ["Geist"], "headline-xl": ["Geist"], "body-lg": ["Geist"], "headline-xl-mobile": ["Geist"], "label-md": ["JetBrains Mono"] }, "fontSize": { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["0.9375rem", { "lineHeight": "1.625rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["0.8125rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["0.8125rem", { "lineHeight": "1.125rem", "letterSpacing": "-0.01em", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}#drawer-toggle:checked ~ #nav-drawer{transform:translateX(0);pointer-events:auto;}#drawer-toggle:checked ~ #drawer-backdrop{opacity:1;pointer-events:auto;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen relative antialiased"><input class="hidden peer" id="drawer-toggle" type="checkbox"/><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><label class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer" for="drawer-toggle"><span class="material-symbols-outlined text-[22px]">menu</span></label><img alt="VERITAS Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W4YPw-FqOlWHrn-FW6gMjLMqYABH6OPccVbzsGorxhAZl7ygh1pXXWc794VdRvzEgtRMHpxlhB-dYR1-KeMM_4VGNAUbfc-H3_OVIl6kqd5dCGUdHl4J86qLAM8wrKuvYDH8IAmeNslBvUPceIfSz5Bphh6LaLGHJTWUbKaiZsxpzciGsRf3anLsnj--aNbaqo_sWlZY_hczlWxi_kChNpgfoGmfmCq6y9YQLW1D4DUYpUTdNX9s2jSwg"/><div class="flex flex-col ml-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">VERITAS</span><span class="font-label-sm text-label-sm text-secondary leading-none mt-1 hidden sm:inline">Research deeply. Verify everything.</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="w-1.5 h-1.5 rounded-full bg-primary absolute top-3 right-3"></span></button><button aria-label="Workspace switcher" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">grid_view</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><label class="fixed inset-0 z-50 bg-inverse-surface/20 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" for="drawer-toggle" id="drawer-backdrop"></label><aside class="fixed top-0 left-0 bottom-0 w-[290px] z-50 bg-surface-container-lowest shadow-[0_4px_24px_rgba(0,0,0,0.08)] transform -translate-x-full pointer-events-none transition-transform duration-300 ease-out flex flex-col pt-safe pb-safe" id="nav-drawer"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="VERITAS Monogram Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W4YPw-FqOlWHrn-FW6gMjLMqYABH6OPccVbzsGorxhAZl7ygh1pXXWc794VdRvzEgtRMHpxlhB-dYR1-KeMM_4VGNAUbfc-H3_OVIl6kqd5dCGUdHl4J86qLAM8wrKuvYDH8IAmeNslBvUPceIfSz5Bphh6LaLGHJTWUbKaiZsxpzciGsRf3anLsnj--aNbaqo_sWlZY_hczlWxi_kChNpgfoGmfmCq6y9YQLW1D4DUYpUTdNX9s2jSwg"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">VERITAS</span></div><label class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface cursor-pointer" for="drawer-toggle"><span class="material-symbols-outlined text-[20px]">close</span></label></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-md"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm text-secondary uppercase tracking-wider">Workspace</span><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="new-research" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-body-md text-body-md">New Research</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="research-history" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-body-md text-body-md">Research History</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="saved-reports" href="#"><span class="material-symbols-outlined text-[20px]">bookmark</span><span class="font-body-md text-body-md">Saved Reports</span></a></div></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm text-secondary uppercase tracking-wider">Intelligence</span><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="research-agents" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md">Research Agents</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="evidence-library" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">Evidence Library</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="verification-activity" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-body-md text-body-md">Verification Activity</span></a></div></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm text-secondary uppercase tracking-wider">Settings</span><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="provider-configuration" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Provider Configuration</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="preferences" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Preferences</span></a></div></div></div><div class="p-space-md"><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary">SYSTEM HEALTH</span><span class="font-body-sm text-body-sm text-on-surface">5 Agents Online</span></div><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span></div></div></aside><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full px-space-md py-space-sm space-y-space-md">
+<!-- Header Section -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase font-semibold">Live Swarm Matrix</span>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-2.5 py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">bolt</span>
+<span class="font-label-sm text-label-sm text-on-surface">Execution: Adversarial</span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Research Agent Orchestration</h1>
+<p class="font-body-sm text-body-sm text-secondary">Autonomous multi-agent verification swarm with continuous epistemic cross-checking.</p>
+</div>
+<!-- Orchestration State Summary Bar -->
+<div class="grid grid-cols-2 gap-space-sm sm:grid-cols-4 bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex flex-col p-space-xs bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">smart_toy</span> Agents Active
+      </span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">8</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">All sub-threads live</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">sync</span> In-Flight Tasks
+      </span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">14</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">3 synthesizing</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified</span> Real-time Consensus
+      </span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">97.8%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">+1.4% confidence</span>
+</div>
+<div class="flex flex-col p-space-xs bg-surface-container-low rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">shield</span> Mode
+      </span>
+<span class="font-headline-md text-headline-md text-on-surface mt-1 truncate">Adversarial</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Tri-party audit</span>
+</div>
+</div>
+<!-- Minimalist Workflow Dependency Flowchart -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Workflow Graph</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Stage 3 of 6
+      </span>
+</div>
+<!-- Flow visual container (scrollable on mobile) -->
+<div class="overflow-x-auto pb-1 pt-1 -mx-space-xs px-space-xs flex items-center gap-1.5 min-w-full">
+<!-- Step 1: Planner -->
+<div class="flex items-center shrink-0">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Planner</span>
+</div>
+<div class="w-4 h-0.5 bg-tertiary"></div>
+</div>
+<!-- Step 2: Researcher Swarm -->
+<div class="flex items-center shrink-0">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">Researchers (α,β,γ)</span>
+</div>
+<div class="w-4 h-0.5 bg-primary relative">
+<span class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</div>
+</div>
+<!-- Step 3: Skeptic (Current) -->
+<div class="flex items-center shrink-0">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary shadow-sm ring-2 ring-primary/20">
+<span class="material-symbols-outlined text-[16px] animate-spin">cyclone</span>
+<span class="font-label-sm text-label-sm font-semibold">Skeptic</span>
+</div>
+<div class="w-4 h-0.5 bg-surface-container-high"></div>
+</div>
+<!-- Step 4: Synthesizer -->
+<div class="flex items-center shrink-0">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span class="font-label-sm text-label-sm">Synthesizer</span>
+</div>
+<div class="w-4 h-0.5 bg-surface-container-high"></div>
+</div>
+<!-- Step 5: Verifier -->
+<div class="flex items-center shrink-0">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[16px]">pending</span>
+<span class="font-label-sm text-label-sm">Verifier</span>
+</div>
+<div class="w-4 h-0.5 bg-surface-container-high"></div>
+</div>
+<!-- Step 6: Editor -->
+<div class="flex items-center shrink-0">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-sm text-label-sm">Editor</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Agent Cards Grid -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Agent Nodes (8)</span>
+<span class="font-label-sm text-label-sm text-secondary">Ordered by Dependency</span>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- 1. Planner Agent -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-xs transition-shadow hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Planner Agent</h2>
+<span class="font-label-sm text-label-sm text-secondary">Orchestration • Epoch 1</span>
+</div>
+</div>
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Completed (100%)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Decomposes research hypothesis into verification trees and atomic empirical claims.</p>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface bg-surface-container-low px-2 py-0.5 rounded-md font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">output</span> 6 Sub-inquiries generated
+          </div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-0.5" type="button">
+            View Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 2. Researcher Alpha -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-xs transition-shadow hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Researcher Alpha</h2>
+<span class="font-label-sm text-label-sm text-secondary">Literature Mining Swarm</span>
+</div>
+</div>
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Completed (100%)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Literature mining across indexed peer-reviewed repositories (Nature, PRX, IEEE, Science).</p>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface bg-surface-container-low px-2 py-0.5 rounded-md font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">output</span> 42 papers parsed
+          </div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-0.5" type="button">
+            View Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 3. Researcher Beta -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-xs transition-shadow hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Researcher Beta</h2>
+<span class="font-label-sm text-label-sm text-secondary">Empirical Extraction Swarm</span>
+</div>
+</div>
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Completed (100%)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Experimental benchmark extraction, empirical artifact scraping &amp; code repo validation.</p>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface bg-surface-container-low px-2 py-0.5 rounded-md font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">output</span> 18 datasets validated
+          </div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-0.5" type="button">
+            View Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 4. Researcher Gamma -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-xs transition-shadow hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Researcher Gamma</h2>
+<span class="font-label-sm text-label-sm text-secondary">Preprint &amp; Prior Art Swarm</span>
+</div>
+</div>
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Completed (100%)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ArXiv preprint scanning, cross-domain citation graph evaluation, and patent prior art ingestion.</p>
+<div class="pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface bg-surface-container-low px-2 py-0.5 rounded-md font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">output</span> 31 preprints cross-checked
+          </div>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline flex items-center gap-0.5" type="button">
+            View Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- 5. Skeptic Agent (Adversary - Active) -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-xs relative overflow-hidden transition-shadow hover:shadow-md">
+<div class="absolute top-0 left-0 right-0 h-1 bg-surface-container-high">
+<div class="h-full bg-primary" style="width: 82%;"></div>
+</div>
+<div class="flex items-start justify-between pt-1">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Skeptic Agent (Adversary)</h2>
+<span class="font-label-sm text-label-sm text-primary font-medium">Contradiction Auditor</span>
+</div>
+</div>
+<span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-bright animate-ping"></span> Active (82%)
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Adversarial counter-claim generator, p-hacking bias detection, and synthetic statistical falsification.</p>
+<!-- Live Execution Detail -->
+<div class="bg-surface-container-low p-space-xs rounded-lg space-y-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-medium">Telemetry Log:</span>
+<span class="text-primary font-semibold">82% completed</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[14px] animate-spin">autorenew</span>
+            Analyzing methodological discrepancies in sample sizes (N=24 vs N=1,400)...
+          </p>
+</div>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">2 Counter-arguments flagged</span>
+<button class="px-3 py-1 rounded-md bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-colors shadow-sm" type="button">
+            Inspect Critique
+          </button>
+</div>
+</div>
+<!-- 6. Synthesizer Agent -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-xs transition-shadow hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">mediation</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Synthesizer Agent</h2>
+<span class="font-label-sm text-label-sm text-secondary">Graph Construction</span>
+</div>
+</div>
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Queued
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Constructs unified hypothesis &amp; evidence graph, reconciling literature with empirical trials.</p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span> Awaiting Skeptic critique lock
+          </span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">
+            View Pipeline
+          </button>
+</div>
+</div>
+<!-- 7. Verifier Agent -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-xs transition-shadow hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Verifier Agent</h2>
+<span class="font-label-sm text-label-sm text-secondary">Cryptographic Auditor</span>
+</div>
+</div>
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Queued
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cryptographic claim provenance attestation and epistemic truthfulness scoring.</p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Awaits Synthesizer evidence graph</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">
+            View Rules
+          </button>
+</div>
+</div>
+<!-- 8. Editor Agent -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col space-y-space-xs transition-shadow hover:shadow-md">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Editor Agent</h2>
+<span class="font-label-sm text-label-sm text-secondary">Discourse &amp; Typography</span>
+</div>
+</div>
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-secondary font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Idle
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Drafts comprehensive academic report with inline bidirectional evidence links and citation pills.</p>
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Template: IMRaD Standard v3</span>
+<button class="font-label-sm text-label-sm text-primary font-semibold hover:underline" type="button">
+            Preview Template
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Agent Event Log Drawer / Feed -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Swarm Telemetry Feed</h3>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 rounded-md bg-surface-container-low text-secondary font-label-sm text-label-sm hover:text-on-surface transition-colors flex items-center gap-1" id="pause-feed-btn" type="button">
+<span class="material-symbols-outlined text-[13px]">pause</span> Auto-scroll
+        </button>
+<span class="font-label-sm text-label-sm text-secondary font-mono">132 EPS</span>
+</div>
+</div>
+<!-- Feed Content -->
+<div class="space-y-space-xs max-h-56 overflow-y-auto pr-1" id="telemetry-feed">
+<!-- Item 1 -->
+<div class="p-space-xs bg-surface-container-low rounded-lg flex items-start gap-space-xs text-on-surface">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary font-mono shrink-0">14:02:18</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Skeptic Agent</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">east</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Consensus Bus</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Flagged p-hacking anomaly in dataset IEEE-9921b [Confidence down 0.8%].</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-space-xs bg-surface-container-low rounded-lg flex items-start gap-space-xs text-on-surface">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary font-mono shrink-0">14:02:01</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">Researcher Gamma</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">east</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Synthesizer Stage</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Delivered 31 preprints with SHA-256 provenance hashes.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-space-xs bg-surface-container-low rounded-lg flex items-start gap-space-xs text-on-surface">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary font-mono shrink-0">14:01:44</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">Researcher Beta</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">east</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Skeptic Agent</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Handoff: 18 empirical benchmark suites ready for counter-testing.</p>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-space-xs bg-surface-container-low rounded-lg flex items-start gap-space-xs text-on-surface">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary font-mono shrink-0">14:00:58</span>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Planner Agent</span>
+<span class="material-symbols-outlined text-[13px] text-secondary">east</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Swarm Pool</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">Tree decomposed into 6 independent hypothesis verification branches.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Micro-interaction for the live log pause button
+  const pauseBtn = document.getElementById('pause-feed-btn');
+  let isPaused = false;
+  if (pauseBtn) {
+    pauseBtn.addEventListener('click', () => {
+      isPaused = !isPaused;
+      pauseBtn.classList.toggle('text-primary', isPaused);
+      pauseBtn.innerHTML = isPaused 
+        ? '<span class="material-symbols-outlined text-[13px]">play_arrow</span> Resume' 
+        : '<span class="material-symbols-outlined text-[13px]">pause</span> Auto-scroll';
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="bg-surface-container-low text-primary font-medium"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-sm text-label-sm">Overview</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg transition-all gap-0.5 bg-surface-container-low text-primary font-medium" data-path="research-agents" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-label-sm text-label-sm">Agents</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="evidence-library" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-label-sm text-label-sm">Claims</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="saved-reports" href="#"><span class="material-symbols-outlined text-[20px]">article</span><span class="font-label-sm text-label-sm">Reports</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="preferences" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-sm text-label-sm">Settings</span></a></div></nav></body></html>

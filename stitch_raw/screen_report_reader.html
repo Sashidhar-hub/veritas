@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>VERITAS</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-low": "#f1f3ff", "surface-bright": "#f9f9ff", "inverse-surface": "#293040", "on-tertiary-fixed-variant": "#005323", "on-primary": "#ffffff", "secondary-fixed-dim": "#c2c6d3", "tertiary-fixed-dim": "#79db8d", "on-primary-container": "#fffbff", "outline-variant": "#c7c4d7", "secondary-fixed": "#dee2ef", "on-secondary-container": "#60646f", "primary-container": "#6063ee", "primary": "#4648d4", "surface-container-lowest": "#ffffff", "on-secondary-fixed": "#171c25", "primary-fixed-dim": "#c0c1ff", "surface-variant": "#dce2f7", "tertiary": "#006d30", "inverse-on-surface": "#edf0ff", "error-container": "#ffdad6", "on-error-container": "#93000a", "on-surface-variant": "#464554", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#424751", "on-primary-fixed-variant": "#2f2ebe", "on-tertiary-fixed": "#00210a", "primary-fixed": "#e1e0ff", "background": "#f9f9ff", "outline": "#767586", "on-surface": "#141b2b", "tertiary-fixed": "#95f8a7", "surface-container-high": "#e1e8fd", "tertiary-container": "#228844", "on-tertiary-container": "#000701", "surface-container": "#e9edff", "secondary": "#5a5e69", "inverse-primary": "#c0c1ff", "on-background": "#141b2b", "secondary-container": "#dee2ef", "surface-tint": "#494bd6", "error": "#ba1a1a", "surface-container-highest": "#dce2f7", "on-error": "#ffffff", "surface-dim": "#d3daef", "surface": "#f9f9ff", "on-secondary": "#ffffff", "on-primary-fixed": "#07006c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "1rem", "gutter": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "space-xl": "2rem", "space-sm": "0.5rem", "margin-desktop": "2rem", "space-md": "1rem", "margin-tablet": "1.5rem" }, "fontFamily": { "headline-md": ["Geist"], "label-sm": ["JetBrains Mono"], "headline-lg": ["Geist"], "body-md": ["Geist"], "headline-sm": ["Geist"], "body-sm": ["Geist"], "headline-xl": ["Geist"], "body-lg": ["Geist"], "headline-xl-mobile": ["Geist"], "label-md": ["JetBrains Mono"] }, "fontSize": { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" }], "label-sm": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-md": ["0.9375rem", { "lineHeight": "1.625rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["0.8125rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.875rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["0.8125rem", { "lineHeight": "1.125rem", "letterSpacing": "-0.01em", "fontWeight": "500" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}#drawer-toggle:checked ~ #nav-drawer{transform:translateX(0);pointer-events:auto;}#drawer-toggle:checked ~ #drawer-backdrop{opacity:1;pointer-events:auto;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen relative antialiased"><input class="hidden peer" id="drawer-toggle" type="checkbox"/><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><label class="w-11 h-11 -ml-space-xs flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer" for="drawer-toggle"><span class="material-symbols-outlined text-[22px]">menu</span></label><img alt="VERITAS Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W4YPw-FqOlWHrn-FW6gMjLMqYABH6OPccVbzsGorxhAZl7ygh1pXXWc794VdRvzEgtRMHpxlhB-dYR1-KeMM_4VGNAUbfc-H3_OVIl6kqd5dCGUdHl4J86qLAM8wrKuvYDH8IAmeNslBvUPceIfSz5Bphh6LaLGHJTWUbKaiZsxpzciGsRf3anLsnj--aNbaqo_sWlZY_hczlWxi_kChNpgfoGmfmCq6y9YQLW1D4DUYpUTdNX9s2jSwg"/><div class="flex flex-col ml-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">VERITAS</span><span class="font-label-sm text-label-sm text-secondary leading-none mt-1 hidden sm:inline">Research deeply. Verify everything.</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="w-1.5 h-1.5 rounded-full bg-primary absolute top-3 right-3"></span></button><button aria-label="Workspace switcher" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">grid_view</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><label class="fixed inset-0 z-50 bg-inverse-surface/20 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" for="drawer-toggle" id="drawer-backdrop"></label><aside class="fixed top-0 left-0 bottom-0 w-[290px] z-50 bg-surface-container-lowest shadow-[0_4px_24px_rgba(0,0,0,0.08)] transform -translate-x-full pointer-events-none transition-transform duration-300 ease-out flex flex-col pt-safe pb-safe" id="nav-drawer"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="VERITAS Monogram Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W4YPw-FqOlWHrn-FW6gMjLMqYABH6OPccVbzsGorxhAZl7ygh1pXXWc794VdRvzEgtRMHpxlhB-dYR1-KeMM_4VGNAUbfc-H3_OVIl6kqd5dCGUdHl4J86qLAM8wrKuvYDH8IAmeNslBvUPceIfSz5Bphh6LaLGHJTWUbKaiZsxpzciGsRf3anLsnj--aNbaqo_sWlZY_hczlWxi_kChNpgfoGmfmCq6y9YQLW1D4DUYpUTdNX9s2jSwg"/><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">VERITAS</span></div><label class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-on-surface cursor-pointer" for="drawer-toggle"><span class="material-symbols-outlined text-[20px]">close</span></label></div><div class="flex-1 overflow-y-auto px-space-md py-space-sm space-y-space-md"><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm text-secondary uppercase tracking-wider">Workspace</span><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="new-research" href="#"><span class="material-symbols-outlined text-[20px]">add_circle</span><span class="font-body-md text-body-md">New Research</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="research-history" href="#"><span class="material-symbols-outlined text-[20px]">history</span><span class="font-body-md text-body-md">Research History</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="saved-reports" href="#"><span class="material-symbols-outlined text-[20px]">bookmark</span><span class="font-body-md text-body-md">Saved Reports</span></a></div></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm text-secondary uppercase tracking-wider">Intelligence</span><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="research-agents" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md">Research Agents</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="evidence-library" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">Evidence Library</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="verification-activity" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-body-md text-body-md">Verification Activity</span></a></div></div><div class="space-y-space-xs"><span class="px-space-sm font-label-sm text-label-sm text-secondary uppercase tracking-wider">Settings</span><div class="space-y-1"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="provider-configuration" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Provider Configuration</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:text-on-surface" data-path="preferences" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Preferences</span></a></div></div></div><div class="p-space-md"><div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-primary">SYSTEM HEALTH</span><span class="font-body-sm text-body-sm text-on-surface">5 Agents Online</span></div><span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span></div></div></aside><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full px-space-md py-space-md max-w-3xl mx-auto space-y-space-lg">
+<!-- Top Document Utility Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Report #VR-2025-084</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-low px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Dual-Blind Audited</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-0.5">
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors active:scale-95 shrink-0" id="copy-btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">content_copy</span>
+<span class="font-label-sm text-label-sm">Copy</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">download</span>
+<span class="font-label-sm text-label-sm">Markdown</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">print</span>
+<span class="font-label-sm text-label-sm">Print</span>
+</button>
+<button class="flex items-center gap-1 px-space-sm py-1.5 rounded-lg bg-primary-fixed text-on-primary-fixed font-medium hover:bg-primary-fixed-dim transition-colors shrink-0 ml-auto" type="button">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+<span class="font-label-sm text-label-sm">42 Citations</span>
+</button>
+</div>
+</div>
+<!-- Header & Epistemic Credentials -->
+<header class="space-y-space-md pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+        28/28 Claims Proven
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+        8 min read
+      </span>
+<span class="font-label-sm text-label-sm text-secondary">Jan 18, 2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+      Fault-Tolerant Quantum Computation via Neutral-Atom Arrays: Comprehensive Verification &amp; Benchmark Synthesis
+    </h1>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">psychology</span>
+<span class="font-label-md text-label-md font-semibold text-primary">VERITAS Swarm Synthesis Core v4.2</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+        Autonomous cross-examination executed across 42 primary peer-reviewed literature items and hardware benchmark repositories. Dual-blind verification confirmed under adversarial prompt arbitration.
+      </p>
+</div>
+</header>
+<!-- Table of Contents Navigation Chips -->
+<nav aria-label="Table of contents" class="overflow-x-auto -mx-space-md px-space-md py-1 flex items-center gap-1.5 no-scrollbar">
+<a class="shrink-0 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm hover:bg-primary hover:text-on-primary text-secondary font-label-sm text-label-sm transition-all active:scale-95" href="#executive-summary">Summary</a>
+<a class="shrink-0 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm hover:bg-primary hover:text-on-primary text-secondary font-label-sm text-label-sm transition-all active:scale-95" href="#methodology">Methodology</a>
+<a class="shrink-0 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm hover:bg-primary hover:text-on-primary text-secondary font-label-sm text-label-sm transition-all active:scale-95" href="#key-findings">Key Findings</a>
+<a class="shrink-0 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm hover:bg-primary hover:text-on-primary text-secondary font-label-sm text-label-sm transition-all active:scale-95" href="#comparative-analysis">Comparative</a>
+<a class="shrink-0 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm hover:bg-primary hover:text-on-primary text-secondary font-label-sm text-label-sm transition-all active:scale-95" href="#skeptic-audit">Skeptic Audit</a>
+<a class="shrink-0 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm hover:bg-primary hover:text-on-primary text-secondary font-label-sm text-label-sm transition-all active:scale-95" href="#limitations">Boundaries</a>
+<a class="shrink-0 px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm hover:bg-primary hover:text-on-primary text-secondary font-label-sm text-label-sm transition-all active:scale-95" href="#references">References</a>
+</nav>
+<!-- Interactive Evidence Drawer / Modal Tooltip Target -->
+<div class="hidden fixed bottom-20 left-1/2 -translate-x-1/2 w-[90%] max-w-md bg-inverse-surface text-inverse-on-surface p-space-sm rounded-xl shadow-xl z-40 transition-all" id="claim-toast">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-semibold" id="claim-toast-id">Claim #104 Verified</span>
+<p class="font-body-sm text-body-sm leading-snug" id="claim-toast-text">Neutral-atom tweezer arrays demonstrated dynamic shuttle movement with zero phase decoherence.</p>
+<span class="font-label-sm text-label-sm text-outline-variant block">Corroborated by Harvard/MIT (Bluvstein et al., Nature 2023)</span>
+</div>
+<button class="text-inverse-on-surface hover:text-white p-1" onclick="document.getElementById('claim-toast').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Document Body -->
+<main class="space-y-space-xl">
+<!-- Section 1: Executive Summary -->
+<section class="space-y-space-sm" id="executive-summary">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold">01</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Executive Summary</h2>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md text-on-surface font-body-md text-body-md leading-relaxed">
+<p>
+          Neutral-atom architectures trapped via optical tweezer arrays have demonstrated parity transition toward scalable fault-tolerant quantum computation (FTQC). Recent experimental synthesis confirms the capability to dynamically reconfigure atomic qubits mid-circuit, bypassing nearest-neighbor connectivity constraints inherent to planar superconducting lattices.
+          <button class="inline-flex items-center gap-1 mx-1 px-2 py-0.5 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm hover:bg-surface-container transition-all active:scale-95" onclick="showClaim('104', 'Neutral-atom tweezer arrays demonstrated dynamic shuttle movement with zero phase decoherence in 48-logical qubit tests.', 'Bluvstein et al., Nature 2023 (DOI: 10.1038/s41586-023-06927-3)')" type="button">
+<span class="material-symbols-outlined text-[12px]">verified</span>#104
+          </button>
+</p>
+<p>
+          By exploiting Rydberg-state excitation protocols, dual-qubit entangling gates routinely achieve fidelities exceeding 99.5%, creating transversal entangling gates across multi-hundred atom ensembles without compounding thermal jitter.
+          <button class="inline-flex items-center gap-1 mx-1 px-2 py-0.5 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm hover:bg-surface-container transition-all active:scale-95" onclick="showClaim('108', 'Two-qubit gate fidelity confirmed at 99.52% using optimized adiabatic pulse shaping in Rubidium-87.', 'Evered et al., Nature 2023')" type="button">
+<span class="material-symbols-outlined text-[12px]">verified</span>#108
+          </button>
+          The culmination of physical hardware tests and mathematical quantum error correction (QEC) codes signifies an inflection point: neutral-atom ensembles are no longer merely quantum simulators, but viable general-purpose fault-tolerant processors.
+        </p>
+</div>
+</section>
+<!-- Section 2: Methodology -->
+<section class="space-y-space-sm" id="methodology">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold">02</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Research Methodology</h2>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          The VERITAS agent cluster executed a tripartite verification process across 42 peer-reviewed experimental papers, arXiv preprints deposited between January 2021 and December 2024, and open-source benchmark logs from major academic consortia:
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">STAGE 1</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Corpus Mining</span>
+<span class="font-body-sm text-body-sm text-secondary">Automated parsing of gate fidelities, decoherence metrics, and optical shuttle latencies.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary font-semibold">STAGE 2</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Adversarial Audit</span>
+<span class="font-body-sm text-body-sm text-secondary">Red-team agents questioned cherry-picked vacuum loss metrics and false-positive readouts.</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">STAGE 3</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Consensus Score</span>
+<span class="font-body-sm text-body-sm text-secondary">Final epistemic agreement reached at 100% corroboration across 28 extracted claims.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Key Findings -->
+<section class="space-y-space-sm" id="key-findings">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold">03</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Key Discoveries &amp; Synthesis</h2>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[14px]">shuffle</span>
+</div>
+<div class="space-y-0.5 flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Arbitrary All-to-All Connectivity</span>
+<span class="font-label-sm text-label-sm text-tertiary shrink-0">99.8% Conf.</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-normal">
+              AOD (Acousto-Optic Deflector) steerable lasers permit arbitrary transposition of physical atoms over 100 µm distances in under 30 µs without dephasing.
+            </p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[14px]">format_image_left</span>
+</div>
+<div class="space-y-0.5 flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Logical Qubit Encoding Scaling</span>
+<span class="font-label-sm text-label-sm text-tertiary shrink-0">100% Conf.</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-normal">
+              Demonstrated instantiation of up to 48 logical qubits using surface codes and color codes, showing physical-to-logical error suppression ratios exceeding 2.1x.
+            </p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[14px]">thermostat</span>
+</div>
+<div class="space-y-0.5 flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Room-Cryo Footprint Efficiency</span>
+<span class="font-label-sm text-label-sm text-tertiary shrink-0">97.4% Conf.</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary leading-normal">
+              Unlike milli-Kelvin dilution refrigerators needed for transmon chips, neutral atoms operate effectively inside optical glass vacuum chambers at 4 Kelvin or ambient ultra-high vacuum.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Comparative Analysis Table -->
+<section class="space-y-space-sm" id="comparative-analysis">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold">04</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Architectural Benchmark Matrix</h2>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-lowest shadow-sm overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase">
+<th class="p-3 rounded-l-lg">Dimension</th>
+<th class="p-3 text-primary font-semibold">Neutral Atoms</th>
+<th class="p-3">Superconducting</th>
+<th class="p-3 rounded-r-lg">Trapped Ions</th>
+</tr>
+</thead>
+<tbody class="text-on-surface">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-3 font-medium">Coherence ($T_2$)</td>
+<td class="p-3 text-tertiary font-semibold">~1.5 - 4.0 s</td>
+<td class="p-3 text-secondary">50 - 150 µs</td>
+<td class="p-3">~10 - 60 s</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="p-3 font-medium">2-Qubit Gate Fidelity</td>
+<td class="p-3 text-tertiary font-semibold">99.5%</td>
+<td class="p-3">99.8%</td>
+<td class="p-3">99.9%</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="p-3 font-medium">Interconnect Scalability</td>
+<td class="p-3 text-tertiary font-semibold">Extremely High</td>
+<td class="p-3 text-secondary">Low (Cables)</td>
+<td class="p-3 text-secondary">Moderate (Shuttling)</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="p-3 font-medium">Active Trap Qubits</td>
+<td class="p-3 text-tertiary font-semibold">1,000+</td>
+<td class="p-3">1,121 (IBM Condor)</td>
+<td class="p-3">64 - 128</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 5: Skeptic Audit & Conflicting Evidence -->
+<section class="space-y-space-sm" id="skeptic-audit">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold">05</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Conflicting Evidence &amp; Skeptic Audit</h2>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary mt-0.5">balance</span>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Laser Scatter vs. Atom Loss Discrepancies</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Early 2022 preprints reported negligible background collision atom loss during circuit depths exceeding 50 cycles. However, our verification protocol identified that later 2024 trials encountered up to 1.8% stray vacuum collisions when array size breached 1,200 traps, requiring actively pulsed optical replenishment.
+            </p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Adversarial Resolution: Settled via 2024 Harvard empirical log series</span>
+<span class="text-tertiary font-medium">Flag Reclassified (Resolved)</span>
+</div>
+</div>
+</section>
+<!-- Section 6: Limitations -->
+<section class="space-y-space-sm" id="limitations">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold">06</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Limitations &amp; Epistemic Boundaries</h2>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-space-sm">
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          While logical transversal CNOT operations have succeeded on 48 logical nodes, commercial readiness remains constrained by three operational hurdles:
+        </p>
+<ul class="list-disc pl-5 font-body-sm text-body-sm text-secondary space-y-1.5">
+<li><strong>Gate Duration Latency:</strong> Rydberg interaction gate times (~200 ns to 1 µs) are roughly 10x slower than superconducting microwave pulses (20-40 ns).</li>
+<li><strong>Laser Optical Wavefront Imperfections:</strong> Residual spatial variations across 2D optical spatial light modulators (SLMs) generate slight Stark shifts.</li>
+<li><strong>State-Preparation-and-Measurement (SPAM):</strong> Atom detection via fluorescence imaging still risks 0.2% heating-induced ejection.</li>
+</ul>
+</div>
+</section>
+<!-- Section 7: References & Evidence Dossier -->
+<section class="space-y-space-sm" id="references">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-bold">07</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Primary Verified Sources</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">4 of 42 Shown</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Citation 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">[1] Bluvstein, D., et al.</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[12px]">verified</span>100% Match
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">
+            "A quantum processor based on coherent transport of entangled atom arrays"
+          </p>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm pt-1">
+<span>Nature 626, 58–65 (2024)</span>
+<a class="text-primary hover:underline flex items-center gap-0.5" href="#">doi:10.1038/s41586-023-06927-3 <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+</div>
+</div>
+<!-- Citation 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">[2] Evered, S. J., et al.</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[12px]">verified</span>100% Match
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">
+            "High-fidelity parallel entangling gates on a neutral-atom quantum computer"
+          </p>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm pt-1">
+<span>Nature 622, 268–272 (2023)</span>
+<a class="text-primary hover:underline flex items-center gap-0.5" href="#">doi:10.1038/s41586-023-06481-y <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+</div>
+</div>
+<!-- Citation 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">[3] Shaw, A. L., et al.</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[12px]">verified</span>98.9% Match
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">
+            "Benchmarking multi-qubit gates on Rydberg neutral atom arrays"
+          </p>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm pt-1">
+<span>PRX Quantum 5, 020312 (2024)</span>
+<a class="text-primary hover:underline flex items-center gap-0.5" href="#">doi:10.1103/PRXQuantum.5.020312 <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+</div>
+</div>
+<!-- Citation 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm space-y-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold">[4] Ebadi, S., et al.</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[12px]">verified</span>100% Match
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">
+            "Quantum optimization of maximum independent set problems using neutral atom arrays"
+          </p>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm pt-1">
+<span>Science 376, 1209–1215 (2022)</span>
+<a class="text-primary hover:underline flex items-center gap-0.5" href="#">doi:10.1126/science.abo6587 <span class="material-symbols-outlined text-[12px]">north_east</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Epistemic Signoff Footer -->
+<footer class="pt-space-md border-t-0 space-y-space-sm text-center">
+<div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-lowest shadow-sm text-primary mx-auto">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+</div>
+<div class="space-y-1">
+<p class="font-label-md text-label-md font-semibold text-on-surface">Synthesized &amp; Verified by VERITAS Autonomous Engine</p>
+<p class="font-label-sm text-label-sm text-secondary">Cryptographic Hash: 0x8f2d4e7a83bb9412e87c538a0f</p>
+</div>
+<button class="mt-space-sm inline-flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-lowest shadow-sm text-primary font-body-sm text-body-sm hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+        Inspect Dual-Blind Audit Trail
+      </button>
+</footer>
+</main>
+</div>
+<script>
+  function showClaim(id, text, citation) {
+    var toast = document.getElementById('claim-toast');
+    var toastId = document.getElementById('claim-toast-id');
+    var toastText = document.getElementById('claim-toast-text');
+    if (toast && toastId && toastText) {
+      toastId.innerText = 'Claim #' + id + ' Verified';
+      toastText.innerText = text;
+      toast.classList.remove('hidden');
+      setTimeout(function() {
+        if (!toast.classList.contains('hidden')) {
+          toast.classList.add('hidden');
+        }
+      }, 6000);
+    }
+  }
+
+  var copyBtn = document.getElementById('copy-btn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function() {
+      var initialText = copyBtn.innerHTML;
+      copyBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">check</span><span class="font-label-sm text-label-sm text-tertiary">Copied</span>';
+      setTimeout(function() {
+        copyBtn.innerHTML = initialText;
+      }, 2000);
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="bg-surface-container-low text-primary font-medium"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-sm text-label-sm">Overview</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="research-agents" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-label-sm text-label-sm">Agents</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="evidence-library" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-label-sm text-label-sm">Claims</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg transition-all gap-0.5 bg-surface-container-low text-primary font-medium" data-path="saved-reports" href="#"><span class="material-symbols-outlined text-[20px]">article</span><span class="font-label-sm text-label-sm">Reports</span></a><a class="flex flex-col items-center justify-center flex-1 h-12 rounded-lg text-on-surface-variant hover:text-on-surface transition-all gap-0.5" data-path="preferences" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-sm text-label-sm">Settings</span></a></div></nav></body></html>
